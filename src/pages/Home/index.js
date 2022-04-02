@@ -96,7 +96,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div style={{display:'flex',justifyContent:'center'}}>
-                            <button className="read-more" variant="contained" color="primary" disableElevation>Read more</button>
+                            <button className="read-more" variant="contained" color="primary">Read more</button>
                     </div>
                     <div className="d-flex brain-part-size">
                         <div className="col-2">
@@ -143,7 +143,7 @@ const Home = () => {
                             </div>
                             <div className="join-textpart">
                                 <div className="d-flex" style={{justifyContent: 'center', marginBottom:'50px'}}><p className="general" style={{textAlign:'center'}}>Yes, I agree with <span style={{color:'#7256E0'}}>terms and conditions</span></p><input type="checkbox" style={{marginTop:'5px',marginLeft:'10px'}}/></div>
-                                <div style={{display:'flex', justifyContent:'center'}}><button className="read-more" variant="contained" color="primary" disableElevation>Join Us</button></div>
+                                <div style={{display:'flex', justifyContent:'center'}}><button className="read-more" variant="contained" color="primary">Join Us</button></div>
                                 <div><p className="general" style={{textAlign:'center'}}>By continuing, you are acepted the main organization documents. These are the <span>Terms of Service</span> and <span>Privacy Policy.</span></p></div>
                             </div>
                         </div>
@@ -155,12 +155,12 @@ const Home = () => {
                             <div className="d-flex row">
                                 
                                     {[0,1,2,3,4,5,6,7].map((item, index) => (
-                                        <div className="col-sm-3">
+                                        <div key={index} className="col-sm-3">
                                         <Braincard key={index} />
                                         </div>
                                     ))}       
                             </div>
-                            <div style={{display:'flex',justifyContent:'center', marginTop:'20px'}}><button className="read-more" variant="contained" color="primary" disableElevation>Show more</button></div>
+                            <div style={{display:'flex',justifyContent:'center', marginTop:'20px'}}><button className="read-more" variant="contained" color="primary">Show more</button></div>
                         </div>
                     </div>
                 </div>
@@ -170,12 +170,12 @@ const Home = () => {
                         <p className="general">Description </p>
                         <div className="d-flex row event-part-size">
                             {[0,1,2,3,4,5,6,7].map((item, index) => (
-                                <div className="event-card">
+                                <div key={index} className="event-card">
                                 <Eventcard key={index} />
                                 </div>
                             ))}       
                             </div>
-                            <div style={{display:'flex',justifyContent:'center', marginTop:'20px'}}><button className="read-more" variant="contained" color="primary" disableElevation>Load more</button></div>
+                            <div style={{display:'flex',justifyContent:'center', marginTop:'20px'}}><button className="read-more" variant="contained" color="primary">Load more</button></div>
                     </div>               
                 </div>
                 <div className="rank-part">
@@ -186,7 +186,7 @@ const Home = () => {
                         </div>
                         <div className="d-flex row event-part-size">
                             {[0,1,2,3,4,5,6,7].map((item, index) => (
-                                <div className="teacher-card">
+                                <div key={index} className="teacher-card">
                                 <Rankcard key={index} />
                                 <img style={{position:'absolute', top:'0',right:'0'}} src={`assets/images/golden${index%3+1}.png`} alt="" width="53" />
                                 </div>
@@ -204,7 +204,7 @@ const Home = () => {
                         </div>
                         <div className="d-flex row event-part-size">
                             {[0,1,2,3,4,5,6,7].map((item, index) => (
-                                <div className="farm-card">
+                                <div key={index} className="farm-card">
                                 <Surveycard key={index} />
                                 </div>
                                 

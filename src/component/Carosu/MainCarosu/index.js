@@ -4,7 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 import { Styles } from "../styles";
 class MainCarosu extends React.Component {
   state = {
-    galleryItems: [1, 2, 3, 4, 5, 6].map((i) =>  <img src="assets/images/student_girl.png" role="presentation" width="100%"/>),
+    galleryItems: [1, 2, 3, 4, 5, 6].map((i) =>  <img key={i} src="assets/images/student_girl.png" role="presentation" width="100%"/>),
   }
 
   responsive = {
